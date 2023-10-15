@@ -1,3 +1,7 @@
+# PLEASE NOTE:
+This is a copy of my final assignment for CS50. This repo is missing the cs50 python module that I used for this project, which was part of the cloud developer environment that we used in the course.
+
+
 # MY MOVIES
 #### Video Demo:  <https://youtu.be/HkbZu71cfN8>
 #### Description:
