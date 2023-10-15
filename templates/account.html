@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link href="/static/styles/account.css" rel="search_item stylesheet">
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/account.js"></script>
+{% endblock %}
+
+{% block title %}Account{% endblock %}
+
+{% block body %}
+<div class="buttons_container">
+    <button class="field_style_dimensions field_style_margin" type="button" id="button_clear_movies">Delete movies history</button>
+    <button class="field_style_dimensions field_style_margin" type="button" id="button_delete_account">Delete account</button>
+    <dialog id="options_dialog">
+        <div class="dialog_container">
+            <p class="dialog_text">Changes cannot be reverted. Proceed?</p>
+            <div>
+                <button class="field_style_dimensions field_style_margin" type="button" id="button_yes">Yes</button>
+                <button class="field_style_dimensions field_style_margin" type="button" id="button_no" onclick="close_options_modal(options_dialog);">No</button>
+                <dialog id="processing_dialog">
+                    <p class="dialog_text">Applying changes...</p>
+                </dialog>
+            </div>
+        </div>
+    </dialog>
+</div>
+{% endblock %}

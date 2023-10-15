@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- this layout was inspired on the Week 9 layout page. You can see the Title block similar to C$50
+title and how I check if the user has or not logged in in order to render the menu options
+just like C$50 layout -->
+
+<html lang="en">
+    <head>
+        <!-- tells the browser about the character encoding, Im assuming this helps the browser
+            render the characters properly. Maybe they use this to decide which ASCII-like table
+            to use when converting the numbers to letters -->
+        <meta charset="utf-8">
+
+        <!-- imports a google font to be used on the site -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <!-- this grabs a hold of the viewport and sets the properties 'initial-scale' and 'width' to
+            the specified values -->
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <!-- import the styles.cs file here -->
+        <link href="/static/styles/general.css" rel="stylesheet">
+        <link href="/static/styles/layout.css" rel="stylesheet">
+
+        <!-- inspired by C$50. Here we insert any .css we want -->
+        {% block styles %}{% endblock %}
+
+        <title>MyMovies: {% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <div class="page_header">
+                <!-- contains the first vertical layer (top to bottom). This is the webs logo (The name
+                     in text) which also serves as a link to index -->
+            </div>
+            {% if session["id"] %}
+            <!-- second vertical layer, a menu for logged in users -->
+            <!-- the if session["id"] was an idea taken from Week 9's assignment -->
+            <div class="menu_bar">
+                <ul type="none" class="menu_options_left">
+                    <li class="menu_option_item"><a href="/">Search</a></li>
+                    <li class="menu_option_item"><a href="/mymovies">My movies</a></li>
+                    <li class="menu_option_item"><a href="/chatroom">Chat room</a></li>
+                </ul>
+                <button class="field_style_dimensions" type="button" id="button_settings">Settings</button>
+                <dialog id="settings_modal">
+                    <div class="settings_container">
+                        <button class="field_style_dimensions field_style_margin" onclick="go_to_page('/account')">Account</button>
+                        <button class="field_style_dimensions field_style_margin" onclick="go_to_page('/logout')">Log out</button>
+                        <button class="field_style_dimensions field_style_margin" id="settings_close">Close</button>
+                    </div>
+                </dialog>
+            </div>
+            {% endif %}
+        </header>
+        <div class="error_log_container">
+            <!-- third vertical layer, outputs a list of errors when needed. Handled by error_msg.js -->
+            <ul id="error_log" class="error_log"></ul>
+        </div>
+
+        <!-- fourth vertical layer below, this contains the main content of the specific page -->
+        {% block body %}{% endblock %}
+
+        <script src="/static/js/error_msg.js"></script>
+
+            {% if session["id"] %}
+
+            <script src="/static/js/menu_bar.js"></script>
+
+            {% endif %}
+        <!-- below we insert any script we need -->
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

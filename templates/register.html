@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link href="/static/styles/register.css" rel="login stylesheet">
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/register.js"></script>
+{% endblock %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+<!-- registration form -->
+<div class="register_container">
+    <input class="field_style_dimensions field_style_margin" id="register_username" name="username" type="textbox" autocomplete="off" autofocus placeholder="username">
+    <input class="field_style_dimensions field_style_margin" id="register_password1" name="password1" type="password" autocomplete="off" placeholder="password">
+    <input class="field_style_dimensions field_style_margin" id="register_password2" name="password2" type="password" autocomplete="off" placeholder="confirm password">
+    <button class="field_style_dimensions field_style_margin" id="register_button" type="button">Register</button>
+</div>
+<!-- footnote message -->
+<p id="login_message">Already have an account? <a href="/login">Log in!</a></p>
+{% endblock %}

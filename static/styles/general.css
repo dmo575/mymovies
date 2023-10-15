@@ -1,0 +1,24 @@
+/*Styles used in multiple html pages. General use styles*/
+
+/*General style for input fields, buttons*/
+.field_style_dimensions {
+    max-width: 12em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/*General marging value for input fields/buttons that stand alone*/
+.field_style_margin {
+    margin: 1em;
+}
+
+.settings_container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Google font, to be used within the website*/
+html {
+    font-family: 'Ubuntu', sans-serif;
+}

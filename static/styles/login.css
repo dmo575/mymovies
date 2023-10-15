@@ -1,0 +1,12 @@
+/*Styles used specifically in the LOGIN html*/
+
+.login_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#register_message {
+    text-align: center;
+    margin-bottom: 20%;
+}

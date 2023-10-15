@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link href="/static/styles/index.css" rel="login stylesheet">
+<link href="/static/styles/searchitem.css" rel="search_item stylesheet">
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/searchitem.js"></script>
+<script src="/static/js/mymovies.js"></script>
+{% endblock %}
+
+{% block title %}My movies{% endblock %}
+
+{% block body %}
+<div class="search_bar_container">
+    <input class="field_style_dimensions field_style_margin" id="search_bar" name="search_bar" type="textbox" autocomplete="off" autofocus placeholder="Search for a movie...">
+    <select id="search_filter" class="field_style_dimensions field_style_margin">
+        <option value=''>All my movies</option>
+        <option value="pen">Pending</option>
+        <option value="fav">Favorites</option>
+        <option value="saw">Seen</option>
+    </select>
+</div>
+
+<div class="results_space">
+    <div class="results_container" id="results_container">
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link href="/static/styles/index.css" rel="login stylesheet">
+<link href="/static/styles/searchitem.css" rel="search_item stylesheet">
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/searchitem.js"></script>
+<script src="/static/js/index.js"></script>
+{% endblock %}
+
+{% block title %}Index{% endblock %}
+
+{% block body %}
+<div class="search_bar_container">
+    <input class="field_style_dimensions field_style_margin" id="search_bar" name="search_bar" type="textbox" autocomplete="off" autofocus placeholder="Search for a movie...">
+    <button class="field_style_dimensions field_style_margin" type="button" id="search_button">SEARCH</button>
+</div>
+
+<div class="results_space">
+    <div class="results_container" id="results_container">
+    </div>
+</div>
+{% endblock %}

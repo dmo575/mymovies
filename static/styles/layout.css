@@ -1,0 +1,29 @@
+/*Styles used specifically in the LAYOUT html*/
+
+.menu_bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*The menu options aligned to the left*/
+.menu_options_left {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu_option_item{
+    margin-right: 1em;
+}
+
+.error_log_container {
+    display: flex;
+    justify-content: center;
+}
+
+/*Div that prints the errors to the user.*/
+.error_log {
+    color: red;
+    text-align: center;
+    max-width: 30em;
+}

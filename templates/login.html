@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+<link href="/static/styles/login.css" rel="login stylesheet">
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/login.js"></script>
+{% endblock %}
+
+{% block title %}Log in{% endblock %}
+
+{% block body %}
+<!-- login form -->
+<div class="login_container" id="login_container">
+    <input class="field_style_dimensions field_style_margin" id="login_username" name="username" type="textbox" autocomplete="off" autofocus placeholder="username">
+    <input class="field_style_dimensions field_style_margin" id="login_password" name="password" type="password" autocomplete="off" placeholder="password">
+    <button class="field_style_dimensions field_style_margin" id="login_button" type="button">Log in</button>
+</div>
+<!-- footnote message -->
+<p id="register_message">Do not have an account? <a href="/register">Register!</a></p>
+{% endblock %}
+
