@@ -1,3 +1,6 @@
+# PLEASE NOTE:
+**Searching the iMDB will NOT WORK, because its API is paid and I stopped renting their services long ago.**
+
 # How to run it:
 This is a copy of my final assignment for CS50, originally uploaded as dmo54 (The GitHub acc I used for the course).
 
