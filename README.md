@@ -1,5 +1,9 @@
-# PLEASE NOTE:
-This is a copy of my final assignment for CS50. This repo is missing the cs50 python module that I used for this project, which was part of the cloud developer environment that we used in the course.
+# How to run it:
+This is a copy of my final assignment for CS50, originally uploaded as dmo54 (The GitHub acc I used for the course).
+
+1. Clone the repo
+2. Install python3 dependencies `pip install -r requirements.txt`
+3. Run Flask's dev server `flask run`
 
 
 # MY MOVIES

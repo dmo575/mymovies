@@ -30,7 +30,7 @@ Session(app)
 socketio = SocketIO(app)
 
 if __name__ == "__main__":
-    socketio.run(app, debug=true)
+    socketio.run(app, debug=True)
 
 # configure CS50 Library to use SQLite database
 db = SQL("sqlite:///server.db")
